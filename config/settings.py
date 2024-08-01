@@ -135,3 +135,30 @@ INTERNAL_IPS = [
     '127.0.0.1',
     '::1',
 ]
+
+# For localmemory caches
+""" CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',
+    }
+}
+ """
+
+#for FilebaseChaches 
+"""  
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': 'C:/Users/admin/Desktop/new_tasks/caches',
+    }
+} """
+
+# For database caches
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'my_cache_table',
+    }
+}
